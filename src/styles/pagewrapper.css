@@ -1,0 +1,104 @@
+/* ---------------- Page Wrapper / Container ---------------- */
+
+.container {
+  margin: 0 auto;
+  
+  max-width: 1200px;
+}
+
+/* Heading styles */
+.container h1 {
+  font-size: 2.5rem; /* Default desktop size */
+  font-weight: 700;
+  color: #1c5a31;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+/* Description text */
+.container p {
+  font-size: 1.2rem; /* Default desktop size */
+  color: #6c757d;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+
+/* Responsive spacing for children */
+.container > *:not(h1):not(p) {
+  margin-top: 1rem;
+}
+
+/* Animation helpers (optional with AOS) */
+[data-aos] {
+  transition: all 0.6s ease-in-out;
+}
+
+/* ---------------- Responsive Breakpoints ---------------- */
+
+/* Large devices (desktop) */
+@media (max-width: 1200px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+  .container h1 {
+    font-size: 2.2rem;
+  }
+  .container p {
+    font-size: 1.15rem;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (max-width: 992px) {
+  .container {
+    padding: 1.8rem 1rem;
+  }
+  .container h1 {
+    font-size: 2rem;
+  }
+  .container p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Small devices (mobile) */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+  .container h1 {
+    font-size: 1.8rem;
+  }
+  .container p {
+    font-size: 1rem;
+  }
+}
+
+/* Extra small devices (small mobile) */
+@media (max-width: 576px) {
+  .container {
+    padding: 1rem 0.75rem;
+  }
+  .container h1 {
+    font-size: 1.6rem;
+  }
+  .container p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Very small devices (tiny mobile) */
+@media (max-width: 400px) {
+  .container {
+    padding: 0.8rem 0.5rem;
+  }
+  .container h1 {
+    font-size: 1.4rem;
+  }
+  .container p {
+    font-size: 0.85rem;
+  }
+}
