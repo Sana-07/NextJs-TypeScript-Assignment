@@ -1,7 +1,13 @@
-import type { NextConfig } from "next";
+// 
 
-const nextConfig: NextConfig = {
-  /* config options here */
+
+// next.config.js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: "export",   // ✅ Static export ke liye
+  images: {
+    unoptimized: true, // ✅ Netlify ke liye zaroori
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

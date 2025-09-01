@@ -6,9 +6,11 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^5.12.1",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.7",
     "next": "15.4.5",
