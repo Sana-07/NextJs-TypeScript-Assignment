@@ -1,81 +1,120 @@
-/* Navbar compact height */
+/* Navbar styling */
 .navbar {
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
-  height: 60px; /* total height fix */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  min-height: 70px;
   align-items: center;
 }
 
-/* Brand/logo adjust */
+/* Brand/logo styling */
+.navbar-brand {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
 .navbar-brand img {
-  height: 40px;   /* logo height */
+  height: 40px;
   width: auto;
 }
 
 /* Navbar link default */
 .navbar .nav-link {
   position: relative;
-  color: #333;
-  font-weight: bold;
+  color: rgba(16, 15, 15, 0.85);
+  font-weight: 500;
   transition: color 0.3s ease;
-  font-size: 16px;    /* thoda compact font */
-  margin-left: 15px;
-  padding: 0.2rem 0;  /* upar-neeche spacing kam */
-}
-
-/* Underline default (width 0) */
-.navbar .nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 0;
-  background-color: #28a745;
-  transition: width 0.3s ease, left 0.3s ease;
+  font-size: 16px;
+  padding: 0.5rem 0.75rem;
+  margin: 0 0.25rem;
 }
 
 /* Hover & Active */
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-  color: #28a745;
+  color: #256c41;
 }
 
-.navbar .nav-link:hover::after,
 .navbar .nav-link.active::after {
-  width: 100%;
+  content: '';
+  position: absolute;
+  bottom: 0;
   left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #1b852e;
 }
 
-/* Search box align */
 .navbar .form-control {
-  height: 38px;       /* input ki height */
-  font-size: 14px;
-  padding: 0.3rem 0.75rem;
+  background-color: #f8f9fa; /* halka grey */
+  border: 1px solid #28a745; /* green border for match */
+  color: #333;              /* text dark */
 }
 
-.navbar .btn {
-  height: 38px;       /* button ki height */
-  line-height: 1;
+
+
+.navbar .form-control {
+  height: 38px;
   font-size: 14px;
-  padding: 0.3rem 1rem;
   border-radius: 6px;
 }
 
-/* Mobile fix */
+.navbar .btn-success {
+  height: 38px;
+  font-size: 14px;
+  padding: 0 1rem;
+  border-radius: 6px;
+}
+
+/* Mobile responsiveness */
 @media (max-width: 991px) {
+  /* Main fix: Make navbar part of normal document flow */
+  .navbar {
+    height: auto;
+    min-height: 70px;
+  }
+  
+  /* Position collapse menu in normal flow */
+  .navbar-collapse {
+    position: static !important;
+    /* background: white !important; */
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+  }
+  
+  /* Links align center */
   .navbar .nav-link {
-    margin-left: 0;
+    display: block;
     text-align: center;
+    padding: 10px 0;
+    margin: 5px 0;
   }
-  /* Default underline width 0, hover/active par 50% center */
-  .navbar .nav-link::after {
-    width: 0;
-    left: 25%; /* center 50% width */
-  }
-  .navbar .nav-link:hover::after,
+  
+  /* Remove active underline on mobile */
   .navbar .nav-link.active::after {
-    width: 50%;
-    left: 25%;
+    display: none;
+  }
+  
+  /* Search form on mobile */
+  .navbar form {
+    margin-top: 15px;
+    width: 100%;
+  }
+  
+  .navbar .form-control {
+    width: 70%;
+  }
+  
+  .navbar .btn {
+    width: 30%;
+  }
+  
+  /* Ensure container expands with content */
+  .navbar .container {
+    flex-wrap: wrap;
   }
 }
