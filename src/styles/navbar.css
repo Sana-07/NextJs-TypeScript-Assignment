@@ -1,33 +1,33 @@
 /* Navbar styling */
 .navbar {
-  padding-top: 0.5rem;
+  padding-top   : 0.5rem;
   padding-bottom: 0.5rem;
-  min-height: 70px;
-  align-items: center;
+  min-height    : 70px;
+  align-items   : center;
 }
 
 /* Brand/logo styling */
 .navbar-brand {
-  font-size: 1.2rem;
+  font-size  : 1.2rem;
   font-weight: bold;
-  display: flex;
+  display    : flex;
   align-items: center;
 }
 
 .navbar-brand img {
   height: 40px;
-  width: auto;
+  width : auto;
 }
 
 /* Navbar link default */
 .navbar .nav-link {
-  position: relative;
-  color: rgba(16, 15, 15, 0.85);
+  position   : relative;
+  color      : rgba(16, 15, 15, 0.85);
   font-weight: 500;
-  transition: color 0.3s ease;
-  font-size: 16px;
-  padding: 0.5rem 0.75rem;
-  margin: 0 0.25rem;
+  transition : color 0.3s ease;
+  font-size  : 16px;
+  padding    : 0.5rem 0.75rem;
+  margin     : 0 0.25rem;
 }
 
 /* Hover & Active */
@@ -37,82 +37,86 @@
 }
 
 .navbar .nav-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
+  content         : '';
+  position        : absolute;
+  bottom          : 0;
+  left            : 0;
+  width           : 100%;
+  height          : 3px;
   background-color: #1b852e;
 }
 
 .navbar .form-control {
-  background-color: #f8f9fa; /* halka grey */
-  border: 1px solid #28a745; /* green border for match */
-  color: #333;              /* text dark */
+  background-color: #f8f9fa;
+  /* halka grey */
+  border          : 1px solid #28a745;
+  /* green border for match */
+  color           : #333;
+  /* text dark */
 }
 
 
 
 .navbar .form-control {
-  height: 38px;
-  font-size: 14px;
+  height       : 38px;
+  font-size    : 14px;
   border-radius: 6px;
 }
 
 .navbar .btn-success {
-  height: 38px;
-  font-size: 14px;
-  padding: 0 1rem;
+  height       : 38px;
+  font-size    : 14px;
+  padding      : 0 1rem;
   border-radius: 6px;
 }
 
 /* Mobile responsiveness */
 @media (max-width: 991px) {
+
   /* Main fix: Make navbar part of normal document flow */
   .navbar {
-    height: auto;
+    height    : auto;
     min-height: 70px;
   }
-  
+
   /* Position collapse menu in normal flow */
   .navbar-collapse {
-    position: static !important;
+    position     : static !important;
     /* background: white !important; */
-    margin-top: 10px;
-    padding: 12px;
+    margin-top   : 10px;
+    padding      : 12px;
     border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 100%;
+    box-shadow   : 0 4px 8px rgba(0, 0, 0, 0.1);
+    width        : 100%;
   }
-  
+
   /* Links align center */
   .navbar .nav-link {
-    display: block;
+    display   : block;
     text-align: center;
-    padding: 10px 0;
-    margin: 5px 0;
+    padding   : 10px 0;
+    margin    : 5px 0;
   }
-  
+
   /* Remove active underline on mobile */
   .navbar .nav-link.active::after {
     display: none;
   }
-  
+
   /* Search form on mobile */
   .navbar form {
     margin-top: 15px;
-    width: 100%;
+    width     : 100%;
   }
-  
+
   .navbar .form-control {
     width: 70%;
   }
-  
+
   .navbar .btn {
     width: 30%;
   }
-  
+
   /* Ensure container expands with content */
   .navbar .container {
     flex-wrap: wrap;
