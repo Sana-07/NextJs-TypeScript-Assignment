@@ -33,7 +33,7 @@
 /* Hover & Active */
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-  color: #256c41;
+  color: #2c7d4c;
 }
 
 .navbar .nav-link.active::after {
